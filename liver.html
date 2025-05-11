@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Liver Donation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><h1>Liver Donation</h1></header>
+  <main>
+    <section>
+        <h2>About liver donation</h2>
+        <p>The liver is a vital part of the digestive system. Choosing to donate your liver could save someone's life.
+
+            Liver donation is usually something that happens after you die, but if you are fit and well it may be possible to donate part of your liver to someone else while you are alive. </p>
+        <h2>Why do some people need liver transplants?</h2>
+        <p>The liver is the largest solid organ in the body, and supports almost every other organ.
+
+            Your liver does many different jobs, such as getting rid of naturally occurring poisons known as toxins, and controling blood fat and sugar levels. It also produces a liquid called bile, which is needed to digest food.
+            
+            When a liver is not working properly and can no longer do these jobs, a person is said to be in liver failure or end-stage liver disease.
+            
+            Living with liver failure can mean being unable to do many of the things that healthy people take for granted. Unfortunately, there is no machine that can help the body to do the jobs of the liver long-term.
+            
+            At this point, when quality of life is so poor, or a person is thought to have a shortened life-expectancy, a transplant is usually considered.</p>
+
+
+      <h2>Why Donate a Liver?</h2>
+      <p>The liver is one of the few organs that can regenerate. Living liver donors give a portion of their liver, which grows back to full size in a few months.</p>
+
+      <h2>Benefits of Liver Donation</h2>
+      <ul>
+        <li><h3>Life-saving:</h3> Liver donation can save the lives of people with end-stage liver disease. </li>
+        <li><h3>Improved Outcomes:</h3> Recipients often experience better long-term outcomes and quicker recovery times with living-donor transplants.</li>
+        <li><h3>Increased Availability:</h3>It increases the number of livers available for transplantation, addressing the shortage of deceased donor organs. </li>
+        <li><h3>Flexible Scheduling:</h3>Living-donor transplants allow for flexible scheduling, potentially allowing for faster transplantation compared to deceased donor transplants. </li>
+        <li><h3>Reduced Waiting Time:</h3>Living donors can shorten the time a recipient spends on the transplant waiting list, minimizing the risk of their condition worsening. </li>
+        <li><h3>Reduced Risk of Rejection:</h3>Living-donor livers are often associated with lower rejection rates. </li>
+        <li><h3>Enhanced Health:</h3> Recipients of living-donor livers often have better health outcomes, with less need for dialysis or blood transfusions.</li>
+      </ul>
+
+      <h2>Importance Considerations</h2>
+      <ul>
+        <li><h3>Donor Health:</h3>Potential donors must be in good health and undergo a thorough evaluation. </li>
+        <li><h3>Medical Conditions:</h3>Individuals with certain medical conditions, such as liver disease, diabetes, heart disease, or cancer, may not be eligible to donate. </li>
+        <li><h3>Surgery:</h3>Liver donation surgery is a major procedure, and both the donor and recipient require hospital stays and post-operative care. </li>
+        <li><h3>Recovery:</h3>Recovery takes time, but both the donor and recipient can usually return to their normal activities. </li>
+        <li><h3>Ethical Considerations:</h3>Living donation involves a degree of personal risk, and potential donors must make a conscious decision based on their understanding of the process and potential outcomes. </li>
+      </ul>
+    </section>
+    <section>
+      
+      <p>In conclusion, liver donation is a remarkable act of generosity that can save lives and improve the quality of life for those suffering from liver disease. </p>
+      <p>While the process involves careful consideration and medical evaluation, the benefits to both the donor and recipient are profound.</p>
+      <p>By understanding the importance of liver donation, we can help raise awareness and encourage more individuals to consider this life-saving option.</p>
+      <p>Whether through living donation or deceased donation, every contribution counts in the fight against liver disease.</p>
+    <p>In essence, donating a liver is a powerful act of altruism that can dramatically improve the lives of those in need, while also offering the donor a chance to make a meaningful difference. </p>
+    </section>
+  </main>
+</body>
+
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .form-container {
+      display: none;
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+      width: 100%;
+      max-width: 500px;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Organ Donation/Receive Form </h1>
+  <button onclick="showForm('donateForm')">Organ Donate</button>
+  <button onclick="showForm('receiveForm')">Organ Receive</button>
+
+  <div id="donateForm" class="form-container">
+    <h2>Organ Donate Form</h2>
+    <form action="donate_submit.php" method="POST">
+      <label>Name:</label><input type="text" name="name" required>
+      <label>Age:</label><input type="number" name="age" required>
+      <label>Blood Group:</label><input type="text" name="blood_group" required>
+      <label>Address:</label><input type="text" name="address" required>
+      <label>Mobile Number:</label><input type="tel" name="mobile" required>
+      <label>NID No/Passport Number:</label><input type="text" name="nid" required>
+      <label>Appointment Date:</label><input type="date" name="appointment_date" required>
+      <button type="submit">Submit Donation</button>
+    </form>
+  </div>
+
+  <div id="receiveForm" class="form-container">
+    <h2>Organ Receive Form</h2>
+    <form action="receive_submit.php" method="POST" enctype="multipart/form-data">
+      <label>Name:</label><input type="text" name="name" required>
+      <label>Age:</label><input type="number" name="age" required>
+      <label>Blood Group:</label><input type="text" name="blood_group" required>
+      <label>Address:</label><input type="text" name="address" required>
+      <label>Mobile Number:</label><input type="tel" name="mobile" required>
+      <label>NID No/Passport Number:</label><input type="text" name="nid" required>
+      <label>Appointment Date:</label><input type="date" name="appointment_date" required>
+      <label>Doctor Documentation (PDF):</label><input type="file" name="doctor_doc" accept="application/pdf" required>
+      <button type="submit">Submit Request</button>
+    </form>
+  </div>
+
+  <script>
+    function showForm(id) {
+      document.getElementById('donateForm').style.display = 'none';
+      document.getElementById('receiveForm').style.display = 'none';
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+</body>
+
+</html>

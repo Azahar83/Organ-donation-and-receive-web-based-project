@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Organ Donation</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .modal {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+    .modal input, .modal select {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    .modal button {
+      background-color: #27ae60;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 999;
+    }
+    .slideshow img {
+      width: 1400px;
+      height: 1000px;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">OrganSave</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#articles">Articles</a>
+      <div class="auth-buttons">
+        <button onclick="toggleModal('login-form')">Login</button>
+        <button onclick="toggleModal('signup-form')">Sign Up</button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="slideshow">
+    <div class="slides">
+      <img src="get-the-facts-compressed.jpg" alt="Organ Donation 1" />
+      <img src="istockphoto-1424846709-1024x1024.jpg" alt="Organ Donation 2" />
+      <img src="organ_donation.jpg" alt="Organ Donation 3" />
+      <img src="organ-donation-kidney-donation-donate-your-kidney-to-save-a-life-vector-illustration-icon-design-2GE5EMD.jpg" alt="Organ Donation 4" />
+     
+
+    </div>
+  </section>
+
+  <main>
+    <section id="articles" class="articles">
+      <h2>Organ Donation Articles</h2>
+      <div class="card-container">
+        <div class="card" onclick="location.href='heart.html'">
+          <img src="img/heart.jpg" alt="Heart Donation">
+          <div class="card-content">
+            <h3>Heart Donation</h3>
+            <p>Learn how heart donation saves lives and what's involved in the process.</p>
+          </div>
+        </div>
+        <div class="card" onclick="location.href='kidney.html'">
+          <img src="kidney.webp" alt="Kidney Donation">
+          <div class="card-content">
+            <h3>Kidney Donation</h3>
+            <p>Kidney donors can save two lives. Understand the impact you can make.</p>
+          </div>
+        </div>
+        <div class="card" onclick="location.href='liver.html'">
+          <img src="liver.webp" alt="Liver Donation">
+          <div class="card-content">
+            <h3>Liver Donation</h3>
+            <p>Partial liver donation can save a life. Discover the facts.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p> 2025 OrganSave. Contact-(EMAIL-rampardnovel83@gmail.com),(Phone-01787165987)</p>
+  </footer>
+
+  <div class="overlay" id="overlay" onclick="closeModals()"></div>
+
+  <!-- Login Form -->
+  <div id="login-form" class="modal" style="display:none">
+    <form method="post" action="login.php">
+      <h2>Login</h2>
+      <input type="email" name="email" placeholder="Email" required><br>
+      <input type="password" name="password" placeholder="Password" required><br>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <!-- Sign Up Form -->
+  <div id="signup-form" class="modal" style="display:none">
+    <form method="post" action="signup.php">
+      <h2>Sign Up</h2>
+      <input type="text" name="name" placeholder="Full Name" required><br>
+      <input type="email" name="email" placeholder="Email" required><br>
+      <input type="number" name="age" placeholder="Age" required><br>
+      <input type="text" name="address" placeholder="Permanent Address" required><br>
+      <input type="text" name="nid" placeholder="NID Card Number" required><br>
+      <select name="organ" required>
+        <option value="">Select Organ to Donate</option>
+        <option value="heart">Heart</option>
+        <option value="kidney">Kidney</option>
+        <option value="liver">Liver</option>
+        <option value="lungs">Lungs</option>
+        <option value="pancreas">Pancreas</option>
+      </select><br>
+      <input type="password" name="password" placeholder="Password" required><br>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+  <script>
+    function toggleModal(id) {
+      document.getElementById(id).style.display = 'block';
+      document.getElementById('overlay').style.display = 'block';
+    }
+    function closeModals() {
+      document.getElementById('login-form').style.display = 'none';
+      document.getElementById('signup-form').style.display = 'none';
+      document.getElementById('overlay').style.display = 'none';
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

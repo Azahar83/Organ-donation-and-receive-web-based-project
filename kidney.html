@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kidney Donation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><h1>Kidney Donation</h1></header>
+  <main>
+    <section>
+      <h2>Why Donate a Kidney?</h2>
+      <p>Donating a kidney can be a life-saving act, offering a better quality of life for the recipient and potentially reducing their need for dialysis. Living donor kidneys often result in longer graft survival and improved outcomes compared to deceased donor kidneys,according to the National Institutes of Health (NIH). Additionally, living donation allows for a more planned and timely transplant, improving the recipient's health and recovery. </p>
+      <p>Many people decide to become living kidney donors when a family member, spouse, or friend experiences kidney failure to help improve the recipient's life.</p>
+      <p>Unlike many organs, you can live with just one kidney. Donating a kidney can dramatically improve the quality of life for someone with chronic kidney disease.</p>
+
+      <h2>The living donor evaluation process:</h2>
+      <ul>
+        <li><h3>Financial consultation:</h3>The transplant center will review your finances and insurance coverage to make sure you can afford to donate since you may be responsible for travel expenses, lost wages, and some follow-up care. </li>
+        <li><h3>Psychological evaluation:</h3>The staff will make sure you understand all the risks and benefits of the surgery so you can make an informed decision. </li>
+        <li><h3>Medical:</h3> You'll go through a myriad of tests to make sure you are physically able to donate. </li>
+        <li><h3>Compatibility tests:</h3>A blood test will check the compatibility between you and the recipient. If you aren't a match, don't worry. Paired kidney exchange programs are available.</li>
+        <li><h3>Additional blood tests:</h3>These tests check for viral activity or transmissible diseases like HIV/AIDS or hepatitis.</li>
+      </ul>
+
+      <h2>Having a kidney removed involves the same risks as any significant surgery, including;</h2>
+      <ul>
+        <li>Pain</li>
+        <li>Infection</li>
+        <li>Pneumonia</li>
+        <li>Kidney damage</li>
+        <li>Blood clotting</li>
+        <li>Collapsed lung</li>
+        <li>Allergic reaction to anesthesia</li>
+      </ul>
+
+      <h2>Here's a more detailed look at the benefits:</h2>
+      <ul >
+        <p>For the Recipient:</p>
+        <li><h3>Improved Health Outcomes:</h3>A living donor kidney generally leads to better graft function and survival compared to a deceased donor kidney. </li>
+        <li><h3>Reduced Dialysis Needs:</h3>Living donation can eliminate the need for dialysis, which can be a burdensome and life-altering experience. </li>
+        <li><h3>Planned and Timely Transplant:</h3>Living donation allows for the transplant to be scheduled when both the donor and recipient are in good health, potentially leading to a better recovery. </li>
+        <li><h3>Better Long-Term Health:</h3>The recipient can enjoy a longer, healthier life with a living donor kidney, notes the National Institutes of Health (NIH) (.gov). </li>
+        <p>For the Donor:</p>
+        <li><h3>Act of Kindness:</h3>Many donors feel a great sense of satisfaction from helping someone in need and making a real difference in their life.</li>
+        <li><h3>Positive Experience:</h3>Many donors report a positive experience overall, despite the surgery and recovery.</li>
+        <li><h3>Reduced Wait Time for Others:</h3>When a recipient gets a kidney from a living donor, they are removed from the deceased donor waitlist, allowing other patients to receive kidneys sooner. </li>
+       
+        
+        
+      </ul>
+
+      <h2>Potential Risks for the Donor:</h2>
+      <ul>
+        <li><h3>Surgical and Medical Risks:</h3>While generally low, there are surgical risks associated with kidney donation</li>
+        <li><h3>Longer Recovery Time:</h3>Full recovery can take up to 6 weeks, but many people start feeling better around 3 weeks after surgery. </li>
+        <li><h3>Disqualification:</h3>Potential donors may be disqualified if they have certain medical conditions, says the National Kidney Registry. </li>
+      </ul>
+    </section>
+  </main>
+</body>
+
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .form-container {
+      display: none;
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+      width: 100%;
+      max-width: 500px;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Organ Donation/Receive Form </h1>
+  <button onclick="showForm('donateForm')">Organ Donate</button>
+  <button onclick="showForm('receiveForm')">Organ Receive</button>
+
+  <div id="donateForm" class="form-container">
+    <h2>Organ Donate Form</h2>
+    <form action="donate_submit.php" method="POST">
+      <label>Name:</label><input type="text" name="name" required>
+      <label>Age:</label><input type="number" name="age" required>
+      <label>Blood Group:</label><input type="text" name="blood_group" required>
+      <label>Address:</label><input type="text" name="address" required>
+      <label>Mobile Number:</label><input type="tel" name="mobile" required>
+      <label>NID No/Passport Number:</label><input type="text" name="nid" required>
+      <label>Appointment Date:</label><input type="date" name="appointment_date" required>
+      <button type="submit">Submit Donation</button>
+    </form>
+  </div>
+
+  <div id="receiveForm" class="form-container">
+    <h2>Organ Receive Form</h2>
+    <form action="receive_submit.php" method="POST" enctype="multipart/form-data">
+      <label>Name:</label><input type="text" name="name" required>
+      <label>Age:</label><input type="number" name="age" required>
+      <label>Blood Group:</label><input type="text" name="blood_group" required>
+      <label>Address:</label><input type="text" name="address" required>
+      <label>Mobile Number:</label><input type="tel" name="mobile" required>
+      <label>NID No/Passport Number:</label><input type="text" name="nid" required>
+      <label>Appointment Date:</label><input type="date" name="appointment_date" required>
+      <label>Doctor Documentation (PDF):</label><input type="file" name="doctor_doc" accept="application/pdf" required>
+      <button type="submit">Submit Request</button>
+    </form>
+  </div>
+
+  <script>
+    function showForm(id) {
+      document.getElementById('donateForm').style.display = 'none';
+      document.getElementById('receiveForm').style.display = 'none';
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+</body>
+
+</html>
